@@ -1,0 +1,1734 @@
+                                    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+                                @import url('https://fonts.googleapis.com/css2?family=Anton&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+                                 :root {
+                                    --white-color: #ffff;
+                                    --dark-color: #222;
+                                    --body-bg-color: #ffff;
+                                    --srction-bg-color: #202834;
+                                    --navigation-item-hover-color: #3b5378;
+                                    --text-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+                                    --box-shadow: 0 5px 25px rgb(0 0 0 /20%);
+                                    --scroll-bar-color: #fff;
+                                    --scroll-thumb-color: #282f4e;
+                                    --scroll-thumb-hover-color: #222c49;
+                                }
+                                /* //////////////////////////// SCROLL BAR ////////////////////////////////////////*/
+                                
+                                 ::-webkit-scrollbar {
+                                    width: 11px;
+                                    background: var(--scroll-bar-color);
+                                }
+                                
+                                 ::-webkit-scrollbar-thumb {
+                                    width: 100%;
+                                    background: var(--scroll-thumb-color);
+                                    border-radius: 2em;
+                                }
+                                
+                                 ::-webkit-scrollbar-thumb:hover {
+                                    background: var(--scroll-thumb-hover-color);
+                                }
+                                /* //////////////////////////// MAIN CSS /////////////////////////////////////////*/
+                                
+                                * {
+                                    margin: 0;
+                                    padding: 0;
+                                    box-sizing: border-box;
+                                    font-family: 'Poppins', sans-serif;
+                                }
+                                
+                                html {
+                                    scroll-behavior: smooth;
+                                }
+                                
+                                body {
+                                    background-color: var(--body-bg-color);
+                                    margin: 0;
+                                    /* -webkit-font-smoothing: antialiased; */
+                                }
+                                
+                                section {
+                                    position: relative;
+                                    /* display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh; */
+                                }
+                                
+                                .section {
+                                    color: var(--white-color);
+                                    background-color: var(--navigation-item-hover-color);
+                                    /* padding: 35px 200px; */
+                                    padding: 25px 50px;
+                                    transition: 0.3s ease;
+                                }
+                                /* ////////////////////////////// HEADER ///////////////////////////////// */
+                                
+                                header {
+                                    position: fixed;
+                                    width: 100%;
+                                    height: 80px;
+                                    padding: 0 30px;
+                                    display: flex;
+                                    justify-content: space-between;
+                                    align-items: center;
+                                    background: var(--navigation-item-hover-color);
+                                    z-index: 1000;
+                                    /* border-bottom: 1px solid #000; */
+                                    /* .....................................................ПРОЗРАЧНАЯ ПАНЕЛЬ МЕНЮ................................... */
+                                    /* z-index: 999;
+                        position: fixed;
+                        width: 100%;
+                        height: calc(5rem + 1rem);
+                        top: 0;
+                        left: 0;
+                        display: flex;
+                        justify-content: center;
+                        transition: 0.5s ease;
+                        transition-property: height, background; */
+                                }
+                                
+                                header.sticky {
+                                    /* height: calc(3.5rem + 1rem);
+    background: rgba(4, 78, 78, 0.938);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(8, 80, 80, 0.856); */
+                                    /* .............ПАНЕЛЬ НАВИГАЦИИ ВТОРОЙ ВАРИАНТ................ */
+                                    height: calc(4rem + 1rem);
+                                    background: var(--navigation-item-hover-color);
+                                    /* background: #fff; */
+                                    font-size: 1em;
+                                    text-decoration: none;
+                                    /* text-shadow: var(--text-shadow); */
+                                    text-shadow: var(--text-shadow);
+                                }
+                                /* .............Расположение на панели навигации................ */
+                                
+                                header .nav-bar {
+                                    margin: 44px auto;
+                                    position: relative;
+                                    width: 100%;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: space-between;
+                                    padding: 0 50px;
+                                    /* padding: 0 200px; */
+                                    transition: 0.3s ease;
+                                    /* background: blue; */
+                                }
+                                /*..................... Кнопки открытия / закрытия меню......................... */
+                                
+                                .nav-close-bth,
+                                .nav-menu-bth {
+                                    display: none;
+                                }
+                                
+                                .logo {
+                                    color: #fff;
+                                    /* color: var(--white-color); */
+                                    font-size: 1.5em;
+                                    /* font-size: 30px; */
+                                    font-weight: 300;
+                                    letter-spacing: 1px;
+                                    text-transform: uppercase;
+                                    text-decoration: none;
+                                    /*...........Remove underlining.............*/
+                                    text-shadow: var(--text-shadow);
+                                    font-family: 'Anton', sans-serif;
+                                }
+                                
+                                .nav-bar .photoLogo {
+                                    max-width: 100%;
+                                    display: inline-block;
+                                    margin-top: 7px;
+                                    /* margin-right: 10%; */
+                                }
+                                /* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+                                
+                                .nav-items {
+                                    font-size: 14px;
+                                    text-transform: uppercase;
+                                }
+                                
+                                .nav_link {
+                                    display: inline-block;
+                                    vertical-align: top;
+                                    margin: 0 15px;
+                                    /*расстояние между словами навигации */
+                                    position: relative;
+                                    /* color: #999; */
+                                    color: rgba(255, 255, 255, .5);
+                                    /* color: #000; */
+                                    text-decoration: none;
+                                    transition: color .2s linear;
+                                    /*длительность изменения цвета */
+                                }
+                                
+                                .nav_link:after {
+                                    content: "";
+                                    display: block;
+                                    width: 100%;
+                                    height: 2px;
+                                    /* background-color: #0fedfd; */
+                                    background-color: #ffff;
+                                    opacity: 0;
+                                    position: absolute;
+                                    top: 100%;
+                                    left: 0;
+                                    z-index: 1;
+                                    /* transition: opacity .1s linear; */
+                                    transform: scale(0);
+                                    transition: all .3s;
+                                }
+                                
+                                .nav_link:hover {
+                                    /* color: #0fedfd; */
+                                    color: #ffff;
+                                }
+                                
+                                .nav_link:hover::after {
+                                    transform: scale(1);
+                                }
+                                
+                                .nav_link:hover::after {
+                                    opacity: 1;
+                                }
+                                /* ..........................Убрал значки навигации....................... */
+                                
+                                .navigation .nav-items a i {
+                                    display: none;
+                                }
+                                /* .......................Отступы между словами навигации .................. */
+                                
+                                .navigation .nav-items a:not(:last-child) {
+                                    margin-right: 45px;
+                                }
+                                /* .......................Форматирование картинки .................. */
+                                /* .swiper-slide {
+position: relative;
+                                                                                                width: 100%;
+                                                                                                min-height: 100vh;
+                                                                                                display: flex;
+                                                                                                flex-direction: column;
+                                                                                                justify-content: flex-start;
+                                                                                                background: url(SF5.jpg) no-repeat;
+                                                                                                background: #07252d no-repeat;
+                                                                                                background-size: cover;
+                                                                                                background-position: center;
+                                                                                            } */
+                                /* ////////////////////////////////////////// HOME ///////////////////////////// */
+                                
+                                .home {
+                                    min-height: 100vh;
+                                }
+                                /* ..................................РАЗМЫТАЯ ГРАНИЦА МЕЖДУ СЕКЦИЯМИ ........................................ */
+                                
+                                .home:before {
+                                    z-index: 888;
+                                    content: '';
+                                    position: absolute;
+                                    width: 100%;
+                                    height: 50px;
+                                    bottom: 0;
+                                    left: 0;
+                                    background: linear-gradient(transparent, white);
+                                }
+                                /* ////////////////////////////////////////// Background slider ///////////////////////////// */
+                                
+                                .bg-slider {
+                                    z-index: 777;
+                                    position: relative;
+                                    width: 100%;
+                                    min-height: 100vh;
+                                }
+                                
+                                .bg-slider .swiper-slide {
+                                    position: relative;
+                                    width: 100%;
+                                    height: 100vh;
+                                }
+                                
+                                .bg-slider .swiper-slide img {
+                                    width: 100%;
+                                    height: 100vh;
+                                    object-fit: cover;
+                                    background-position: center;
+                                    background-size: cover;
+                                    pointer-events: none;
+                                    /* background: #060422; */
+                                }
+                                
+                                .swiper-slide .text-content {
+                                    position: absolute;
+                                    top: 25%;
+                                    color: var(--white-color);
+                                    /* margin: 0 200px; */
+                                    margin: 0 120px 0 50px;
+                                    transition: 0.3s ease;
+                                }
+                                /* ............................Стилизация заголовка................................. */
+                                
+                                .swiper-slide .text-content .title {
+                                    font-size: 3em;
+                                    /* font-size: 4em; */
+                                    font-weight: 700;
+                                    text-shadow: var(--text-shadow);
+                                    margin-bottom: 20px;
+                                    transform: translateY(-50px);
+                                    opacity: 0;
+                                }
+                                /* ............................Всплывающие эффекты................................. */
+                                
+                                .swiper-slide-active .text-content .title {
+                                    transform: translateY(0);
+                                    opacity: 1;
+                                    transition: 1s ease;
+                                    transition-delay: 0.3s;
+                                    transition-property: transform, opacity;
+                                }
+                                /* .swiper-slide .text-content .title span */
+                                /* {
+    font-size: 0.3em;
+    font-weight: 700; 
+}  */
+                                /* ............................Стилизация рамки объявления в шапке................................. */
+                                
+                                .swiper-slide .text-content p {
+                                    max-width: 700px;
+                                    /* background: rgba(255, 255, 255, 0.1); */
+                                    background: rgba(255, 255, 255, 0.1);
+                                    backdrop-filter: blur(20px);
+                                    text-shadow: var(--text-shadow);
+                                    padding: 20px;
+                                    border-radius: 10px;
+                                    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                                    border-right: 1px solid rgba(255, 255, 255, 0.1);
+                                    box-shadow: var(--box-shadow);
+                                    /* font-size: 1.5em;    ////////////////////////////Размер шрифта предложений в шапке сайта//////////////////////////// */
+                                    transform: translateX(-80px);
+                                    opacity: 0;
+                                }
+                                /* ............................Всплывающий эффект предложений................................. */
+                                
+                                .swiper-slide-active .text-content p {
+                                    transform: translateX(0);
+                                    opacity: 1;
+                                    transition: 1s ease;
+                                    transition-delay: 0.3s;
+                                    transition-property: transform, opacity;
+                                }
+                                /* ............................Стилизация кнопки................................. */
+                                
+                                .swiper-slide .text-content .read-bth {
+                                    /* ////////////////////////////Первый вариант//////////////////////////// */
+                                    border: none;
+                                    outline: none;
+                                    background: var(--white-color);
+                                    color: var(--dark-color);
+                                    font-size: 0.9em;
+                                    font-weight: 500;
+                                    padding: 5px 15px;
+                                    display: flex;
+                                    align-items: center;
+                                    margin-top: 40px;
+                                    border-radius: 10px;
+                                    cursor: pointer;
+                                    transform: translateX(50px);
+                                    opacity: 0;
+                                    /* border: 3px solid #454547;
+    font-size: 20px;
+    color: #454547;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 90px;
+    height: 40px;
+    display: block;
+    text-align: center;
+    line-height: 42px;
+    position: relative;
+    transition: .5s;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 60px; */
+                                }
+                                /* ........................ АНИМАЦИЯ ПЛАВНОЕ ПОЯВЛЕНИЕ КНОПКИ.......................... */
+                                
+                                .swiper-slide-active .text-content .read-bth {
+                                    transform: translateX(0);
+                                    opacity: 1;
+                                    transition: 1s ease;
+                                    transition-delay: 0.3s;
+                                    transition-property: transform, opacity;
+                                }
+                                
+                                .swiper-slide .text-content .read-bth i {
+                                    font-size: 1.6em;
+                                    transition: 0.3s ease;
+                                }
+                                /* ........................ АНИМАЦИЯ СТРЕЛКИ В КНОПКАХ.......................... */
+                                
+                                .swiper-slide .text-content .read-bth:hover i {
+                                    transform: translateX(9px);
+                                }
+                                /* ........................ ЗАТЕМНЕНИЕ В РАМКЕ ПРЕДЛОЖЕНИЙ.......................... */
+                                
+                                .dark-layer:before {
+                                    content: '';
+                                    position: absolute;
+                                    width: 100%;
+                                    height: 100vh;
+                                    top: 0;
+                                    left: 0;
+                                    background: rgba(0, 0, 0, 0.2);
+                                }
+                                /* ........................ МИНИ СЛАЙДЕР.......................... */
+                                
+                                .bg-slider-thumbs {
+                                    z-index: 777;
+                                    position: absolute;
+                                    bottom: 3em;
+                                    /* bottom: 7em; */
+                                    left: 50%;
+                                    transform: translateX(-50%);
+                                    transition: 0.3s ease;
+                                }
+                                
+                                .thumbs-container {
+                                    background-color: rgba(225, 255, 255, 0.1);
+                                    backdrop-filter: blur(10px);
+                                    padding: 10px 3px;
+                                    border-radius: 10px;
+                                    border-bottom: 1px solid rgba(225, 255, 255, 0.1);
+                                    border-right: 1px solid rgba(255, 255, 255, 0.1);
+                                    box-shadow: var(--box-shadow);
+                                }
+                                
+                                .thumbs-container img {
+                                    width: 50px;
+                                    height: 35px;
+                                    margin: 0 5px;
+                                    border-radius: 5px;
+                                    cursor: pointer;
+                                }
+                                /* ........................ РАМКА В (ВЫДЕЛЕНИЕ) МИНИ СЛАЙДЕР.......................... */
+                                
+                                .swiper-slide-thumb-active {
+                                    border: 1px solid var(--white-color)
+                                    /* border: 1px solid #13d7e6; */
+                                }
+                                /* ////////////////////////////////// MEDIA ICONS///////////////////////////////// */
+                                
+                                .media-icons {
+                                    z-index: 999;
+                                    position: absolute;
+                                    display: flex;
+                                    flex-direction: column;
+                                    top: 50%;
+                                    right: 0;
+                                    transform: translateY(-50%);
+                                    /* margin-right: 70px; */
+                                    margin-right: 20px;
+                                }
+                                
+                                .media-icons a {
+                                    position: relative;
+                                    color: #fff;
+                                    font-size: 1.7em;
+                                    transition: 0.3s;
+                                    transition-property: transform;
+                                    margin: 10px 0;
+                                    /* color: #13d7e6; */
+                                }
+                                
+                                .media-icons a:not(:last-child) {
+                                    margin-right: 10px;
+                                }
+                                /* ........................ АНИМАЦИЯ ИКОНОК.......................... */
+                                
+                                .media-icons a:hover {
+                                    transform: scale(1.5);
+                                }
+                                /* ///////////////////////////////////////////// Информация после слайдера  //////////////////////////////// */
+                                
+                                .services_dop {
+                                    display: flex;
+                                    flex-wrap: wrap;
+                                    margin: 40px;
+                                }
+                                
+                                .services__item_dop {
+                                    width: 25%;
+                                    padding: 0 35px 40px 85px;
+                                    position: relative;
+                                    margin-bottom: 40px;
+                                }
+                                @media(max-width: 990px) {
+                                    .services_dop
+                                    {
+                                        width: 50%;
+                                        padding-bottom: 0;
+                                    } 
+                                    .services__item_dop
+                                    {
+                                        border-bottom: 0;
+                                    }
+                                    
+                                }
+                                @media (max-width: 770px) {
+                                    .services_dop
+                                    {
+                                        justify-content: center;
+
+                                    }
+                                    .services__item_dop
+                                    {
+                                        width: 100%;
+                                        max-width: 400px;
+                                        padding-left: 55px;
+                                        padding-right: 0;
+                                    }
+                                    .services__icon
+                                    {
+                                        left: 0;
+                                    }
+                                    
+                                }
+                                /* ////////////////////////////////////////////// Секция ОБ ОРГАНИЗАЦИИ /////////////////////////////// */
+                                
+                                .organization {
+                                    padding: 80px 0;
+                                }
+                                
+                                .container {
+                                    width: 100%;
+                                    max-width: 1230px;
+                                    /* max-width: 2000px; */
+                                    padding: 0 15px;
+                                    margin: 0 auto;
+                                }
+                                
+                                .section_header {
+                                    width: 100%;
+                                    max-width: 1230px;
+                                    margin: 0 auto 40px;
+                                    text-align: center;
+                                }
+                                
+                                .section_suptitle {
+                                    font-family: 'Kaushan Script', cursive;
+                                    font-size: 24px;
+                                    color: #333;
+                                }
+                                
+                                .section_title {
+                                    font-size: 30px;
+                                    font-weight: 700;
+                                    color: #333;
+                                    text-transform: uppercase;
+                                }
+                                
+                                .section_title:after
+                                /*Псевдоэлемент - полоска */
+                                
+                                {
+                                    content: "";
+                                    display: block;
+                                    width: 60px;
+                                    height: 3px;
+                                    margin: 30px auto;
+                                    background-color: #333;
+                                }
+                                /* ...................... Полоска после слов "ВИДЫ УСЛУГ"......................... */
+                                /* ..................................Расположение иконки ............................. */
+                                
+                                .services__title {
+                                    margin-bottom: 10px;
+                                    font-size: 14px;
+                                    color: #333;
+                                    text-transform: uppercase;
+                                }
+                                
+                                .services__text {
+                                    font-size: 15px;
+                                    color: #999;
+                                }
+                                
+                                .services {
+                                    display: flex;
+                                    flex-wrap: wrap;
+                                    /* display: grid; */
+                                    /* gap: 70px;
+                                                                                                                        grid-template-columns: (3, 1fr); */
+                                }
+                                
+                                .services__item {
+                                    /* width: 33%; */
+                                    /* flex: 1 1 0; */
+                                    width: 33.3333%;
+                                    padding: 0 35px 40px 85px;
+                                    position: relative;
+                                    margin-bottom: 40px;
+                                }
+                                
+                                .services__item_S {
+                                    /* width: 33%; */
+                                    /* flex: 1 1 0; */
+                                    width: 50%;
+                                    padding: 0 35px 40px 85px;
+                                    position: relative;
+                                    margin-bottom: 40px;
+                                }
+                                @media (max-width: 1300px)
+                                {
+                                    .services__item_S{
+                                       width: 50%; 
+                                    }
+                                }
+
+                                @media (max-width: 767px)
+                                {
+                                    .services__item_S{
+                                        width: 100%; 
+                                        height: 300px;
+                                     }
+                                 }
+
+                                 @media (max-width: 340px)
+                                 {
+                                     .services__item_S{
+                                         width: 100%; 
+                                         height: 100px;
+                                      }
+                                  }
+                                
+                                .services__item--border {
+                                    border-bottom: 1px solid #e5e5e5;
+                                }
+                                
+                                .services__icon {
+                                    position: absolute;
+                                    top: 0;
+                                    left: 28px;
+                                    z-index: 1;
+                                }
+                                
+                                .services__title {
+                                    margin-bottom: 10px;
+                                    font-size: 14px;
+                                    color: #333;
+                                    text-transform: uppercase;
+                                }
+                                
+                                .services__text {
+                                    font-size: 15px;
+                                    color: #999;
+                                }
+                                /* ///////////////////////////////////////// Секция УСЛУГИ  (About section)   /////////////////////////////////// */
+                                
+                                .about h2 {
+                                    font-size: 2.5em;
+                                    font-weight: 600;
+                                    margin-top: 40px;
+                                    text-align: center;
+                                }
+                                
+                                .about h3 {
+                                    font-size: 2em;
+                                    font-weight: 100;
+                                    text-align: center;
+                                }
+                                
+                                .about h3:after
+                                /*Псевдоэлемент - полоска */
+                                
+                                {
+                                    content: "";
+                                    display: block;
+                                    width: 60px;
+                                    height: 3px;
+                                    margin: 30px auto;
+                                    background-color: #ffff;
+                                }
+                                
+                                .about p {
+                                    margin: 25px 0;
+                                    /* ........................ Отсупы между абзацами.......................... */
+                                    font-size: 0.9em;
+                                }
+                                /* ///////////WORKS (уСЛУГИ) /////////////////// */
+                                
+                                .works {
+                                    display: flex;
+                                    flex-wrap: wrap;
+                                }
+                                
+                                .works__item {
+                                    width: 20%;
+                                    height: 350px;
+                                    border-bottom: 1px solid #ffff;
+                                    border-right: 1px solid #ffff;
+                                    position: relative;
+                                    overflow: hidden;
+                                }
+                                
+                                .works__item:hover .works__content {
+                                    opacity: 1;
+                                }
+                                
+                                .works__photo {
+                                    min-width: 100%;
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 50%;
+                                    z-index: 1;
+                                    transform: translate3d(-50%, -50%, 0);
+                                }
+                                
+                                .works__content {
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: center;
+                                    width: 100%;
+                                    height: 100%;
+                                    background-color: #2c69c5b2;
+                                    opacity: 0;
+                                    text-align: center;
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    z-index: 2;
+                                    transition: opacity .2s linear;
+                                }
+                                
+                                .works__title {
+                                    margin-bottom: 5px;
+                                    font-size: 14px;
+                                    font-weight: 700;
+                                    color: #fff;
+                                }
+                                
+                                .works__text {
+                                    font-size: 14px;
+                                    color: #ffff;
+                                }
+                                /* ........................Кнопка......................... */
+                                
+                                .bth {
+                                    display: inline-block;
+                                    vertical-align: top;
+                                    padding: 8px 30px;
+                                    /*форма кнопки (ширина-высота) */
+                                    border: 3px solid #fff;
+                                    font-size: 14px;
+                                    /*Размер шрифта */
+                                    font-weight: 700;
+                                    color: #fff;
+                                    text-transform: uppercase;
+                                    text-decoration: none;
+                                    /*Убрали подчеркивание ссылки */
+                                    margin: 60px auto 0;
+                                    /*Отступ от полоски */
+                                    transition: background .1s linear, color .1s linear;
+                                }
+                                
+                                .bth:hover {
+                                    background-color: #fff;
+                                    color: #333;
+                                }
+
+                                /* ........................Адаптация ............................................... */
+                                @media (max-width: 1300px)
+                                {
+                                    .works__item{
+                                       width: 50%; 
+                                    }
+                                }
+
+                                @media (max-width: 767px)
+                                {
+                                    .works__item{
+                                        width: 100%; 
+                                        height: 300px;
+                                     }
+                                 }
+                                
+
+
+
+
+                                /* /////////////////////////////////////////////////// СЕКЦИЯ ПОДАРОЧНЫЙ СЕРТИФИКАТ///////////////////////////////////// */
+                               
+                                /* ................................Второй вариант............................................. */
+                                
+                                .wrapper_serf {
+                                    display: flex;
+                                    /* background: #3b5378; */
+                                    background: #2c69c5b2;
+                                    width: 100%;
+                                    justify-content: space-around;
+                                    /* border-bottom: 1px solid #000;
+                                                                                                                                                                                                        border-right: 1px solid #000; */
+                                }
+                                
+                                .card_serf {
+                                    /* width: 1000px;
+                                                                                                                                                                                                            height: 538px; */
+                                    width: 1000px;
+                                    height: 538px;
+                                    padding: 2rem 1rem;
+                                    background: #fff;
+                                    position: relative;
+                                    display: flex;
+                                    align-items: flex-end;
+                                    box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+                                    transition: 0.5s ease-in-out;
+                                    /* border-bottom: 1px solid #000;
+                                                                                                                                                                                                border-right: 1px solid #000; */
+                                }
+                                
+                                .card_serf:hover {
+                                    transform: translateY(20px);
+                                }
+                                
+                                .card_serf:before {
+                                    content: "";
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    display: block;
+                                    width: 100%;
+                                    height: 100%;
+                                    /* background: linear-gradient(to bottom, rgba(24, 97, 206, 0.5), rgb(12, 140, 214)); */
+                                    background: linear-gradient(to bottom, #3b5378, #2c69c5b2);
+                                    z-index: 1;
+                                    transition: 0.5s all;
+                                    opacity: 0;
+                                }
+                                
+                                .card_serf:hover:before {
+                                    opacity: 1;
+                                }
+                                
+                                .card_serf img {
+                                    width: 100%;
+                                    height: 100%;
+                                    object-fit: cover;
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                }
+                                
+                                .card_serf .info_serf {
+                                    position: relative;
+                                    z-index: 3;
+                                    color: #fff;
+                                    opacity: 0;
+                                    transform: translateY(30px);
+                                    translate: 0.5s all;
+                                }
+                                /* .card_serf .info_serf h2 {
+                 text-align: center;
+             } */
+                                
+                                .card_serf:hover .info_serf {
+                                    opacity: 1;
+                                    transform: translateY(0px);
+                                }
+                                
+                                .card_serf .info_serf h2 {
+                                    margin: 0;
+                                    text-align: center;
+                                }
+                                
+                                .card_serf .info_serf p {
+                                    letter-spacing: 1px;
+                                    font-size: 20px;
+                                    margin-top: 8px;
+                                    margin-bottom: 20px;
+                                }
+                                
+                                .bth_serf {
+                                    display: inline-block;
+                                    vertical-align: top;
+                                    padding: 8px 30px;
+                                    /*форма кнопки (ширина-высота) */
+                                    border: 3px solid #fff;
+                                    font-size: 14px;
+                                    /*Размер шрифта */
+                                    font-weight: 700;
+                                    color: #fff;
+                                    text-transform: uppercase;
+                                    text-decoration: none;
+                                    /*Убрали подчеркивание ссылки */
+                                    margin: 60px auto 0;
+                                    /*Отступ от полоски */
+                                    transition: background .1s linear, color .1s linear;
+                                }
+                                
+                                .bth_serf:hover {
+                                    background-color: #fff;
+                                    color: #333;
+                                }
+                                
+                                .card_serf .info_serf .bth_serf {
+                                    position: relative;
+                                    left: 50%;
+                                    transform: translate(-50%, 0);
+                                }
+                                /* ////////////////////////////////////////////////// Секция НАША КОМАНДА /////////////////////// */
+                                
+                                .about_team {
+                                    display: flex;
+                                    justify-content: space-between;
+                                }
+                                
+                                .about__item_team {
+                                    width: 380px;
+                                }
+                                
+                                
+                                .about__img_team img {
+                                    display: block;
+                                    transition: opacity .1s linear;
+                                }
+                                
+                                .about__text_team {
+                                    width: 100%;
+                                    font-size: 18px;
+                                    color: #fff;
+                                    text-transform: uppercase;
+                                    font-weight: 700;
+                                    text-align: center;
+                                    opacity: 0;
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 0;
+                                    z-index: 2;
+                                    transform: (0, -50%, 0);
+                                    transition: opacity .2s linear;
+                                }
+                                /* ...................СТИЛИЗАЦИЯ ИКОНОК ДЛЯ СЕКЦИИ "НАША КОМАНДА" - " КОНТАКТЫ".................................. */
+                                
+                                .social_team {
+                                    display: flex;
+                                    /* justify-content: center; */
+                                }
+                                
+                                .social__item_team {
+                                    width: 55px;
+                                    height: 55px;
+                                    padding: 12px 10px;
+                                    background-color: #3b5378;
+                                    border-right: 1px solid #e5e5e5;
+                                    font-size: 30px;
+                                    text-decoration: none;
+                                    color: #fff;
+                                    line-height: 1;
+                                    transition: background .1s, linear, color .1s linear;
+                                }
+                                
+                                .social__item_team:last-child {
+                                    border-right: 0;
+                                }
+                                
+                                .social__item_team:hover {
+                                    color: #3b5378;
+                                    background-color: #fff;
+                                }
+                                
+                                .about__info_team {
+                                    margin-top: 20px;
+                                    text-align: center;
+                                }
+                                
+                                .about__name_team {
+                                    margin-bottom: 5px;
+                                    font-size: 14px;
+                                    color: #000;
+                                    text-transform: uppercase;
+                                }
+                                
+                                .about__prof_team {
+                                    font-size: 15px;
+                                    font-style: italic;
+                                    font-weight: 300;
+                                    color: #999;
+                                }
+                                
+
+                                
+                                /* /////////////////////////////////////////////////////////////////////// МЕСТОПОЛОЖЕНИЕ  ////////////////////////////////////////////////////// */
+                                
+                                .section-contacts {
+                                    overflow: hidden;
+                                }
+                                
+                                .section-contacts__container {
+                                    position: relative;
+                                }
+                                
+                                .section-contacts__container::before {
+                                    content: '';
+                                    position: absolute;
+                                    /* background: url(../img/section-contacts/tomatoes.jpg) no-repeat; */
+                                    background-size: cover;
+                                    width: 672px;
+                                    height: 397px;
+                                    right: -350px;
+                                    bottom: -100px;
+                                }
+                                
+                                .sectoin-contacts__title {
+                                    margin-bottom: 0;
+                                }
+                                
+                                .contacts {
+                                    display: flex;
+                                    align-items: center;
+                                    position: relative;
+                                    flex-wrap: wrap;
+                                    justify-content: center;
+                                }
+                                
+                                .contacts__start {
+                                    width: 50%;
+                                }
+                                
+                                .contacts__end {
+                                    width: 50%;
+                                    padding-left: 30px;
+                                }
+                                
+                                .contacts__map {
+                                    height: 430px;
+                                    box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+                                    /* background: #fef0b4; */
+                                    margin-bottom: 50px;
+                                }
+                                
+                                .contacts__item {
+                                    margin-bottom: 35px;
+                                }
+                                
+                                .contacts__item:last-of-type {
+                                    margin-bottom: 0;
+                                }
+                                
+                                .contacts__title {
+                                    margin: 0 0 5px;
+                                    font-family: 'Montserrat', sans-serif;
+                                    font-size: 18px;
+                                    font-weight: 900;
+                                    font-style: italic;
+                                }
+                                
+                                .contacts__text {
+                                    margin: 0;
+                                    font-size: 18px;
+                                }
+                                
+                                .contacts__phone {
+                                    color: inherit;
+                                    text-decoration: none;
+                                    transition: color .2s;
+                                }
+                                
+                                .contacts__phone:hover {
+                                    color: #ffa650;
+                                }
+                                
+                                @media (max-width: 1800px) {
+                                    .section-contacts__container::before {
+                                        right: -250px;
+                                    }
+                                }
+                                
+                                @media (max-width: 1600px) {
+                                    .section-contacts__container::before {
+                                        right: -150px;
+                                        bottom: -200px;
+                                    }
+                                }
+                                
+                                @media (max-width: 1400px) {
+                                    .section-contacts__container::before {
+                                        right: -100px;
+                                    }
+                                }
+                                
+                                @media (max-width: 1300px) {
+                                    .section-contacts__container::before {
+                                        right: -50px;
+                                    }
+                                }
+                                
+                                @media (max-width: 1200px) {
+                                    .section-contacts__container::before {
+                                        content: none;
+                                    }
+                                }
+                                
+                                @media (max-width: 992px) {
+                                    .contacts__map {
+                                        height: 350px;
+                                    }
+                                }
+                                
+                                @media (max-width: 767px) {
+                                    .section-contacts {
+                                        padding-bottom: 0;
+                                    }
+                                    .contacts__start {
+                                        width: 100%;
+                                        order: 1;
+                                    }
+                                    .contacts__end {
+                                        width: 400px;
+                                        max-width: 100%;
+                                        margin-bottom: 40px;
+                                        padding-left: 0;
+                                    }
+                                    .contacts__map {
+                                        margin: 0 -20px;
+                                        height: 300px;
+                                    }
+                                }
+                                /* ////////////////////////////////////////////////////// ОТЗЫВЫ ////////////////////////////////////////////////////// */
+                                /* .container_com {
+                                                                                                                                                                    position: relative;
+                                                                                                                                                                    width: 400px;
+                                                                                                                                                                    background: #111;
+                                                                                                                                                                    padding: 20px 30px;
+                                                                                                                                                                    border: 1px solid #444;
+                                                                                                                                                                    border-radius: 5px;
+                                                                                                                                                                    display: flex;
+                                                                                                                                                                    align-items: center;
+                                                                                                                                                                    justify-content: center;
+                                                                                                                                                                    flex-direction: column;
+                                                                                                                                                                }
+                                                                                                                                                                
+                                                                                                                                                                .container .post {
+                                                                                                                                                                    display: none;
+                                                                                                                                                                }
+                                                                                                                                                                
+                                                                                                                                                                .container .text {
+                                                                                                                                                                    font-size: 25px;
+                                                                                                                                                                    color: #666;
+                                                                                                                                                                    font-weight: 500;
+                                                                                                                                                                }
+                                                                                                                                                                
+                                                                                                                                                                .container .edit {
+                                                                                                                                                                    position: absolute;
+                                                                                                                                                                    right: 10px;
+                                                                                                                                                                    top: 5px;
+                                                                                                                                                                    font-size: 16px;
+                                                                                                                                                                    color: #666;
+                                                                                                                                                                    font-weight: 500;
+                                                                                                                                                                    cursor: pointer;
+                                                                                                                                                                }
+                                                                                                                                                                
+                                                                                                                                                                .container .edit:hover {
+                                                                                                                                                                    text-decoration: underline;
+                                                                                                                                                                }
+                                                                                                                                                                
+                                                                                                                                                                .container .star-widget input {
+                                                                                                                                                                    display: none;
+                                                                                                                                                                }
+                                                                                                                                                                
+                                                                                                                                                                .star-widget label {
+                                                                                                                                                                    font-size: 40px;
+                                                                                                                                                                    color: #444;
+                                                                                                                                                                    padding: 10px;
+                                                                                                                                                                    float: right;
+                                                                                                                                                                    transition: all 0.2s ease;
+                                                                                                                                                                }
+                                                                                                                                                                
+                                                                                                                                                                input:not(:checked)~label:hover,
+                                                                                                                                                                input:not(:checked)~label:hover~label {
+                                                                                                                                                                    color: #fd4;
+                                                                                                                                                                }
+                                                                                                                                                                
+                                                                                                                                                                input:checked~label {
+                                                                                                                                                                    color: #fd4;
+                                                                                                                                                                }
+                                                                                                                                                                
+                                                                                                                                                                input#rate-5:checked~label {
+                                                                                                                                                                    color: #fe7;
+                                                                                                                                                                    text-shadow: 0 0 20px #952;
+                                                                                                                                                                }
+                                                                                                                                                                
+                                                                                                                                                                #rate-1:checked~form header:before {
+                                                                                                                                                                    content: "I just hate it ";
+                                                                                                                                                                }
+                                                                                                                                                                
+                                                                                                                                                                #rate-2:checked~form header:before {
+                                                                                                                                                                    content: "I don't like it ";
+                                                                                                                                                                }
+                                                                                                                                                                
+                                                                                                                                                                #rate-3:checked~form header:before {
+                                                                                                                                                                    content: "It is awesome ";
+                                                                                                                                                                }
+                                                                                                                                                                
+                                                                                                                                                                #rate-4:checked~form header:before {
+                                                                                                                                                                    content: "I just like it ";
+                                                                                                                                                                }
+                                                                                                                                                                
+                                                                                                                                                                #rate-5:checked~form header:before {
+                                                                                                                                                                    content: "I just love it ";
+                                                                                                                                                                }
+                                                                                                                                                                
+                                                                                                                                                                .container form {
+                                                                                                                                                                    display: none;
+                                                                                                                                                                }
+                                                                                                                                                                
+                                                                                                                                                                input:checked~form {
+                                                                                                                                                                    display: block;
+                                                                                                                                                                }
+                                                                                                                                                                
+                                                                                                                                                                form header {
+                                                                                                                                                                    width: 100%;
+                                                                                                                                                                    font-size: 25px;
+                                                                                                                                                                    color: #fe7;
+                                                                                                                                                                    font-weight: 500;
+                                                                                                                                                                    margin: 5px 0 20px 0;
+                                                                                                                                                                    text-align: center;
+                                                                                                                                                                    transition: all 0.2s ease;
+                                                                                                                                                                }
+                                                                                                                                                                
+                                                                                                                                                                form .textarea {
+                                                                                                                                                                    height: 100px;
+                                                                                                                                                                    width: 100%;
+                                                                                                                                                                    overflow: hidden;
+                                                                                                                                                                }
+                                                                                                                                                                
+                                                                                                                                                                form .textarea textarea {
+                                                                                                                                                                    height: 100%;
+                                                                                                                                                                    width: 100%;
+                                                                                                                                                                    outline: none;
+                                                                                                                                                                    color: #eee;
+                                                                                                                                                                    border: 1px solid #333;
+                                                                                                                                                                    background: #222;
+                                                                                                                                                                    padding: 10px;
+                                                                                                                                                                    font-size: 17px;
+                                                                                                                                                                    resize: none;
+                                                                                                                                                                }
+                                                                                                                                                                
+                                                                                                                                                                .textarea textarea:focus {
+                                                                                                                                                                    border-color: #444;
+                                                                                                                                                                }
+                                                                                                                                                                
+                                                                                                                                                                form .btn {
+                                                                                                                                                                    height: 45px;
+                                                                                                                                                                    width: 100%;
+                                                                                                                                                                    margin: 15px 0;
+                                                                                                                                                                }
+                                                                                                                                                                
+                                                                                                                                                                form .btn button {
+                                                                                                                                                                    height: 100%;
+                                                                                                                                                                    width: 100%;
+                                                                                                                                                                    border: 1px solid #444;
+                                                                                                                                                                    outline: none;
+                                                                                                                                                                    background: #222;
+                                                                                                                                                                    color: #999;
+                                                                                                                                                                    font-size: 17px;
+                                                                                                                                                                    font-weight: 500;
+                                                                                                                                                                    text-transform: uppercase;
+                                                                                                                                                                    cursor: pointer;
+                                                                                                                                                                    transition: all 0.3s ease;
+                                                                                                                                                                }
+                                                                                                                                                                
+                                                                                                                                                                form .btn button:hover {
+                                                                                                                                                                    background: #1b1b1b;
+                                                                                                                                                                } */
+                                /* .container_com {
+                                                                                                                                                            
+                                                                                                                                                            background: #111;
+                                                                                                                                                            padding: 20px 30px;
+                                                                                                                                                            border: 1px solid #4444;
+                                                                                                                                                            border-radius: 5px;
+                                                                                                                                                            display: flex;
+                                                                                                                                                            align-items: center;
+                                                                                                                                                            justify-content: center;
+                                                                                                                                                            flex-direction: column;
+                                                                                                                                                        } */
+                                
+                                .container_com .star-widget input {
+                                    display: none;
+                                }
+                                
+                                .testimonial-box-container {
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    flex-wrap: wrap;
+                                    width: 100%;
+                                }
+                                
+                                .testimonial-box {
+                                    width: 500px;
+                                    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
+                                    background-color: #ffffff;
+                                    padding: 20px;
+                                    margin: 15px;
+                                    cursor: pointer;
+                                }
+                                
+                                .profile-img {
+                                    width: 50px;
+                                    height: 50px;
+                                    border-radius: 50%;
+                                    overflow: hidden;
+                                    margin-right: 10px;
+                                }
+                                
+                                .profile-img img {
+                                    width: 100%;
+                                    height: 100%;
+                                    object-fit: cover;
+                                    object-position: center;
+                                }
+                                
+                                .profile {
+                                    display: flex;
+                                    align-items: center;
+                                }
+                                
+                                .name-user {
+                                    display: flex;
+                                    flex-direction: column;
+                                }
+                                
+                                .name-user strong {
+                                    color: #3d3d3d;
+                                    font-size: 1.1rem;
+                                    letter-spacing: 0.5px;
+                                }
+                                
+                                .name-user span {
+                                    color: #979797;
+                                    font-size: 0.8rem;
+                                }
+                                
+                                .reviews {
+                                    color: #f9d71c;
+                                }
+                                
+                                .box-top {
+                                    display: flex;
+                                    justify-content: space-between;
+                                    align-items: center;
+                                    margin-bottom: 20px;
+                                }
+                                
+                                .client-comment p {
+                                    font-size: 0.9rem;
+                                    color: #4b4b4b;
+                                }
+                                
+                                .testimonial-box:hover {
+                                    transform: translateY(-10px);
+                                    transition: all ease 0.3s;
+                                }
+                                
+                                @media(max-width:1060px) {
+                                    .testimonial-box {
+                                        width: 45%;
+                                        padding: 10px;
+                                    }
+                                }
+                                
+                                @media(max-width:790px) {
+                                    .testimonial-box {
+                                        width: 100%;
+                                    }
+                                    .testimonial-heading h1 {
+                                        font-size: 1.4rem;
+                                    }
+                                }
+                                
+                                @media(max-width:340px) {
+                                    .box-top {
+                                        flex-wrap: wrap;
+                                        margin-bottom: 10px;
+                                    }
+                                    .reviews {
+                                        margin-top: 10px;
+                                    }
+                                }
+                                
+                                 ::selection {
+                                    color: #ffffff;
+                                    background-color: #252525;
+                                }
+                                /* ///////////////////////////////////////////////// ФУТЕР /////////////////////////////////////////////////////////// */
+                                
+                                .contact-section {
+                                    background-color: #3b5378;
+                                    width: 100%;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    /* margin-bottom: 20px; */
+                                }
+                                
+                                .contect-info {
+                                    color: #fff;
+                                    max-width: 500px;
+                                    line-height: 65px;
+                                    padding-left: 50px;
+                                    font-size: 18px;
+                                }
+                                
+                                .contact-form {
+                                    max-width: 700px;
+                                    margin-right: 50px;
+                                }
+                                
+                                .contect-info,
+                                .contact-form {
+                                    flex: 1;
+                                }
+                                
+                                .contact-form h2 {
+                                    color: #fff;
+                                    text-align: center;
+                                    font-size: 35px;
+                                    text-transform: uppercase;
+                                    margin-bottom: 30px;
+                                }
+                                
+                                .contact-form .text-box {
+                                    background-color: #222c49;
+                                    color: #fff;
+                                    border: none;
+                                    width: calc(50% - 10px);
+                                    /* width: 100%; */
+                                    height: 50px;
+                                    padding: 12px;
+                                    font-size: 15px;
+                                    border-radius: 5px;
+                                    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+                                    margin-bottom: 20px;
+                                    opacity: 0.9;
+                                }
+                                
+                                .contact-form .text-box:first-child {
+                                    margin-right: 10px;
+                                }
+                                
+                                .contact-form textarea {
+                                    background: #222c49;
+                                    color: #fff;
+                                    border: none;
+                                    width: 100%;
+                                    padding: 12px;
+                                    font-size: 15px;
+                                    min-height: 200px;
+                                    max-height: 400px;
+                                    resize: vertical;
+                                    border-radius: 5px;
+                                    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+                                    margin-bottom: 20px;
+                                    opacity: 0.9;
+                                }
+                                
+                                .contact-form .send-bth {
+                                    float: right;
+                                    background-color: #2c69c5;
+                                    /* background-color: #2e94e3; */
+                                    color: #fff;
+                                    border: none;
+                                    width: 120px;
+                                    height: 40px;
+                                    font-size: 14px;
+                                    font-weight: 600;
+                                    text-transform: uppercase;
+                                    letter-spacing: 2px;
+                                    border-radius: 5px;
+                                    transition: 0.3s;
+                                    transition-property: background;
+                                    cursor: pointer;
+                                }
+                                
+                                .contact-form .send-bth:hover {
+                                    background: #0582e3;
+                                }
+                                /* ////////////////////////////// НИЖНЯЯ ЧАСТЬ ФУТЕРА //////////////////////////////// */
+                                
+                                .footer__copyright {
+                                    padding: 30px 0;
+                                    background-color: #2b3961;
+                                }
+                                
+                                .copyright__text {
+                                    text-align: center;
+                                    font-size: 14px;
+                                    line-height: 1.5;
+                                    color: rgba(255, 255, 255, .5);
+                                }
+                                
+                                .copyright__text .MrSin {
+                                    color: #fff;
+                                    text-decoration: none;
+                                }
+                                /* ///////////////////////////////////////////////////////////////////////////////////////// */
+                                
+                                @media screen and (max-width: 950px) {
+                                    .contact-section {
+                                        flex-direction: column;
+                                    }
+                                    .contect-info,
+                                    .contact-form {
+                                        margin: 30px 50px;
+                                    }
+                                    .contact-form h2 {
+                                        font-size: 30px;
+                                    }
+                                    .contact-form .text-box {
+                                        width: 100%;
+                                    }
+                                }
+                                
+                                .alert-success {
+                                    z-index: 1;
+                                    background: #282f4e;
+                                    color: #fff;
+                                    font-size: 18px;
+                                    padding: 20px 40px;
+                                    min-width: 420px;
+                                    /* position: fixed; */
+                                    right: 0;
+                                    top: 10px;
+                                    border-left: 8px solid #2c69c5;
+                                    border-radius: 4px;
+                                }
+                                /* ///////////////////////////////////////////////////////// ВТОРОЙ ВАРИАНТ ////////////////////////////////////////// */
+                                
+                                .footer {
+                                    padding: 70px 0;
+                                    background-color: #3b5378;
+                                }
+                                
+                                .footer__inner {
+                                    display: flex;
+                                    flex-wrap: wrap;
+                                }
+                                
+                                .footer__block {
+                                    margin-bottom: 30px;
+                                }
+                                
+                                .footer__title {
+                                    margin-bottom: 10px;
+                                    font-size: 14px;
+                                    font-weight: 700;
+                                    color: #fff;
+                                    text-transform: uppercase;
+                                }
+                                
+                                .footer__adres {
+                                    font-size: 14px;
+                                    line-height: 1.5;
+                                    color: rgba(255, 255, 255, .5);
+                                    font-style: normal;
+                                }
+                                
+                                .footer__fone {
+                                    color: rgba(255, 255, 255, .5);
+                                }
+                                
+                                .footer__text {
+                                    font-size: 14px;
+                                    line-height: 1.5;
+                                    color: rgba(255, 255, 255, .5);
+                                    font-style: normal;
+                                }
+                                
+                                .footer__recvez {
+                                    font-size: 14px;
+                                    text-decoration: none;
+                                    color: rgba(255, 255, 255, .5);
+                                }
+                                
+                                .footer__oplata {
+                                    font-size: 14px;
+                                    text-decoration: none;
+                                    color: rgba(255, 255, 255, .5);
+                                }
+                                /* ////////////////////////////////////////////////// Media queries (max-width: 1100px)//////////////////////////// */
+                                
+                                @media screen and (max-width: 1100px) {
+                                    header .nav-bar {
+                                        padding: 0 50px;
+                                        /* padding: 25px 50px; */
+                                    }
+                                    .section {
+                                        padding: 25px 50px;
+                                    }
+                                    .media-icons {
+                                        right: 0;
+                                        margin-right: 20px;
+                                    }
+                                    .swiper-slide .text-content {
+                                        margin: 0 120px 0 50px;
+                                    }
+                                    .bg-slider-thumbs {
+                                        bottom: 3em;
+                                    }
+                                }
+                                    /* ///////////////////////////////////////////////////////////// */
+                                    /* ////////////////////////////////////////////////// Media queries (max-width: 1100px)//////////////////////////// */
+                                    @media screen and (max-width: 785px)
+                                     {
+                                        header .nav-bar {
+                                            padding: 25px 20px;
+                                        }
+                                        .section {
+                                            padding: 25px 20px;
+                                        }
+                                        .media-icons {
+                                            margin-right: 20px;
+                                        }
+                                        .media-icons a {
+                                            font-size: 1.5em;
+                                        }
+                                        .swiper-slide .text-content {
+                                            margin: 0 70px 0 20px;
+                                        }
+                                        .swiper-slide .text-content .title {
+                                            font-size: 3em;
+                                        }
+                                        .swiper-slide .text-content p {
+                                            font-size: 0.9em;
+                                        }
+
+                                       
+                                        /* ////////////////////////////////////////////////// Navigation menu (Адаптивное меню)//////////////////////////// */
+                                        .nav-menu-bth {
+                                            display: block;
+                                            color: var(--scroll-bar-color);
+                                            font-size: 1.5em;
+                                            cursor: pointer;
+                                        }
+                                        .nav-close-bth {
+                                            display: block;
+                                            /* color: var(--dark-color); */
+                                            color: #fff;
+                                            position: absolute;
+                                            top: 0;
+                                            right: 0;
+                                            font-size: 1.3em;
+                                            margin: 10px;
+                                            cursor: pointer;
+                                            transition: 0.3s ease;
+                                        }
+                                        .navigation {
+                                            z-index: 99999;
+                                            position: fixed;
+                                            width: 100%;
+                                            height: 100vh;
+                                            top: 0;
+                                            left: 0;
+                                            background: rgb(0, 0, 0, 0.25);
+                                            display: flex;
+                                            justify-content: center;
+                                            align-items: center;
+                                            visibility: hidden;
+                                            opacity: 0;
+                                            transition: 0.3s ease;
+                                        }
+                                        .navigation.active {
+                                            visibility: visible;
+                                            opacity: 1;
+                                        }
+                                        .navigation .nav-items {
+                                            position: relative;
+                                            /* background: var(--white-color); */
+                                            background: #3b5378;
+                                            width: 400px;
+                                            max-width: 400px;
+                                            display: grid;
+                                            place-content: center;
+                                            margin: 20px;
+                                            padding: 40px;
+                                            border-radius: 20px;
+                                            box-shadow: var(--box-shadow);
+                                            transform: translateY(-200px);
+                                            transition: 0.3s ease;
+                                        }
+                                        /* //////////////////////////////////// ВСПЛЫВАЮЩИЙ ЭФФЕКТ МЕНЮ ДЛЯ ТЕЛЕФОНА */
+                                        .navigation.active .nav-items {
+                                            transform: translateY(0);
+                                        }
+                                        .navigation .nav-items a {
+                                            /* color: var(--dark-color); */
+                                            color: rgba(255, 255, 255, .5);
+                                            font-size: 1em;
+                                            margin: 15px 50px;
+                                            transition: 0.3s ease;
+                                        }
+                                        .navigation .nav-items a:hover {
+                                            /* color: #2c69c5; */
+                                            color: #ffff;
+                                        }
+                                        .navigation .nav-items a i {
+                                            display: inline-block;
+                                            font-size: 1.3em;
+                                            margin-top: 5px;
+                                        }
+                                        .swiper-slide .text-content .read-bth {
+                                            font-size: 0.9em;
+                                            padding: 5px 15px;
+                                        }
+                                        /* ///////////////////////////// ABOUT SECTION ////////////////////////// */
+                                        .about h2 {
+                                            font-size: 2.5em;
+                                        }
+                                        .about p {
+                                            font-size: 0.9em;
+                                        }
+                                    }
+
+                                    @media (max-width: 767px)
+                                    {
+                                        .nav-bar{
+                                            width: 100%; 
+                                            height: 300px;
+                                         }
+                                     }
+                                    @media (max-width: 990px) {
+                                        /* Services */
+                                        .services__item {
+                                            width: 50%;
+                                            padding-bottom: 0;
+                                        }
+                                        .services__item--border {
+                                            border-bottom: 0;
+                                        }
+                                        /* section {
+                                                            padding: 100px 50px 50px;
+                                                            flex-direction: column;
+                                                            justify-content: center;
+                                                            align-items: center;
+                                                            display: flex;
+                                                        } */
+                                    }
+                                    @media (max-width: 770px) {
+                                        /* Section */
+                                        /* .section {
+                                                                        padding: 40px 0;
+                                                                    } */
+                                        /* Services */
+                                        .services {
+                                            justify-content: center;
+                                        }
+                                        .services__item {
+                                            width: 100%;
+                                            max-width: 400px;
+                                            padding-left: 55px;
+                                            padding-right: 0;
+                                        }
+                                        .services__icon {
+                                            left: 0;
+                                        }
+                                    }

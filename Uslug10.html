@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Sky-Venture</title>
+    <link rel="stylesheet" href="swiper-bundle.min.css.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Uslug1.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+</head>
+
+
+<body>
+    <header id="panel">
+        <div class="nav-bar">
+            <div class="photoLogo"><img src="iconn9.png" alt=""></div>
+            <a href="#" class="logo">Sky-Venture</a>
+
+            <div class="navigation">
+                <div class="nav-items">
+                    <i class="uil uil-times nav-close-bth"></i>
+                    <a href="menu.html#a" class="nav_link"><i class="uil-notebooks"></i> Об организации</a>
+                    <a href="menu.html #b" class="nav_link"><i class="uil uil-plane-fly"></i> Услуги</a>
+                    <a href="menu.html #c" class="nav_link"><i class="uil uil-gift"></i> Подарочные сертификаты</a>
+                    <a href="menu.html #d" class="nav_link"><i class="uil-users-alt"></i> Наша команда</a>
+                    <a href="menu.html #e" class="nav_link"><i class=" uil-map-marker"></i> Местоположение</a>
+                    <a href="#" class="nav_link"><i class="uil uil-comment-alt"></i>Отзывы</a>
+                    <a href="menu.html #f" class="nav_link"><i class="uil uil-clipboard"></i> Контакты</a>
+
+                    <!-- <a href="#" class="nav_link"><i class="uil uil-phone"></i> Заказать звонок</a> -->
+                </div>
+            </div>
+            <i class="uil uil-bars nav-menu-bth"></i>
+
+
+        </div>
+    </header>
+
+    <section class="section_uslug1">
+        <div class="container_uslug1">
+            <div class="section__header_uslug1">
+                <h3 class="section__suptitle_uslug1">L-29</h3>
+                <h2 class="section__title_uslug1">Описание</h2>
+
+            </div>
+
+            <div class="section1 section-contacts">
+                <div class="container section-contacts__container">
+                    <!-- <header class="section__header">
+                        <h2 class="section__title sectoin-contacts__title">Контакты</h2>
+                    </header> -->
+                    <div class="contacts">
+                        <div class="contacts__start">
+                            <!-- <div class="contacts__map"></div> -->
+
+                            <div class="img-slider">
+                                <div class="slide active">
+                                    <img src="Uslug1/1.jpg" alt="">
+                                    <div class="info">
+
+                                    </div>
+                                </div>
+                                <div class="slide">
+                                    <img src="Uslug1/2.jpg" alt="">
+                                    <div class="info">
+
+                                    </div>
+                                </div>
+                                <div class="slide">
+                                    <img src="Uslug1/3.jpg" alt="">
+                                    <div class="info">
+
+                                    </div>
+                                </div>
+                                <div class="slide">
+                                    <img src="Uslug1/4.jpg" alt="">
+                                    <div class="info">
+
+                                    </div>
+                                </div>
+                                <div class="slide">
+                                    <img src="Uslug1/5.jpg" alt="">
+                                    <div class="info">
+
+                                    </div>
+                                </div>
+                                <div class="slide">
+                                    <img src="Uslug1/6.jpg" alt="">
+                                    <div class="info">
+                                        <!-- <h2>Slide 05</h2>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> -->
+                                    </div>
+                                </div>
+                                <div class="navigation">
+                                    <div class="btn active"></div>
+                                    <div class="btn"></div>
+                                    <div class="btn"></div>
+                                    <div class="btn"></div>
+                                    <div class="btn"></div>
+                                    <div class="btn"></div>
+                                </div>
+                            </div>
+                            <!-- ///////////////////////////////////////////// Скрипт для слайдера ////////////////////////////////////////// -->
+                            <script type="text/javascript">
+                                var slides = document.querySelectorAll('.slide');
+                                var btns = document.querySelectorAll('.btn');
+                                let currentSlide = 1;
+
+
+                                var manualNav = function(manual) {
+                                    slides.forEach((slide) => {
+                                        slide.classList.remove('active');
+
+                                        btns.forEach((btn) => {
+                                            btn.classList.remove('active');
+                                        });
+                                    });
+
+                                    slides[manual].classList.add('active');
+                                    btns[manual].classList.add('active');
+                                }
+
+                                btns.forEach((btn, i) => {
+                                    btn.addEventListener("click", () => {
+                                        manualNav(i);
+                                        currentSlide = i;
+                                    });
+                                });
+
+
+                                var repeat = function(activeClass) {
+                                    let active = document.getElementsByClassName('active');
+                                    let i = 1;
+
+                                    var repeater = () => {
+                                        setTimeout(function() {
+                                            [...active].forEach((activeSlide) => {
+                                                activeSlide.classList.remove('active');
+                                            });
+
+                                            slides[i].classList.add('active');
+                                            btns[i].classList.add('active');
+                                            i++;
+
+                                            if (slides.length == i) {
+                                                i = 0;
+                                            }
+                                            if (i >= slides.length) {
+                                                return;
+                                            }
+                                            repeater();
+                                        }, 10000);
+                                    }
+                                    repeater();
+                                }
+                                repeat();
+                            </script>
+
+                            <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+                        </div>
+                        <div class="contacts__end">
+                            <div class="contacts__item">
+                                <h3 class="contacts__title">L-29</h3>
+                            </div>
+
+                            <div class="contacts__item">
+                                <h3 class="contacts__title">Аэродром: Воскресенск</h3>
+                            </div>
+
+                            <div class="contacts__item">
+                                <h3 class="contacts__title">Аэродром: Мячково</h3>
+                            </div>
+                            <div class="contacts__item">
+                                <h3 class="contacts__title">Срок действия сертификат: 6 или 12 месяцев</h3>
+                            </div>
+                            <div class="contacts__item">
+                                <h3 class="contacts__title">Цена: от 6750р</h3>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+<!-- ////////////////////////////////////////////////////////// 2 variant      //////////////////////////////////////////////////////// -->
+<!-- <div class="blog-slider">
+    <div class="blog-slider__wrap swiper-wrapper">
+        <div class="blog-slider__item swiper-slide">
+            <div class="blog-slider__img">
+                <img src="Uslug1/1.jpg" alt="">
+               
+            </div>
+            <div class="blog-slider__content">
+                
+                
+                <span class="blog-slider__code">Cessna-152</span>
+                <div class="blog-slider__text">Самолет: Cessna-152 </div>
+                <div class="blog-slider__text">Аэродром: Воскресенск </div>
+                <div class="blog-slider__text">Аэродром: Мячково </div>
+                <div class="blog-slider__text">Срок действия сертификат: 6 или 12 месяцев </div>
+                <div class="blog-slider__text">Цена: от 6750р </div>
+                
+               
+            </div>
+        </div>
+
+        <div class="blog-slider__item swiper-slide">
+            <div class="blog-slider__img">
+               
+                <img src="Uslug1/2.jpg" alt="">
+               
+            </div>
+            <div class="blog-slider__content">
+              
+                
+                <span class="blog-slider__code">Cessna-152</span>
+                <div class="blog-slider__text">Самолет: Cessna-152 </div>
+                <div class="blog-slider__text">Аэродром: Воскресенск </div>
+                <div class="blog-slider__text">Аэродром: Мячково </div>
+                <div class="blog-slider__text">Срок действия сертификат: 6 или 12 месяцев </div>
+                <div class="blog-slider__text">Цена: от 6750р </div>
+                
+                
+            </div>
+        </div>
+
+
+        <div class="blog-slider__item swiper-slide">
+            <div class="blog-slider__img">
+                
+                <img src="Uslug1/3.jpg" alt="">
+               
+            </div>
+            <div class="blog-slider__content">
+               
+                
+                <span class="blog-slider__code">Cessna-152</span>
+                <div class="blog-slider__text">Самолет: Cessna-152 </div>
+                <div class="blog-slider__text">Аэродром: Воскресенск </div>
+                <div class="blog-slider__text">Аэродром: Мячково </div>
+                <div class="blog-slider__text">Срок действия сертификат: 6 или 12 месяцев </div>
+                <div class="blog-slider__text">Цена: от 6750р </div>
+                
+                
+            </div>
+        </div>
+
+
+        <div class="blog-slider__item swiper-slide">
+            <div class="blog-slider__img">
+                
+                <img src="Uslug1/4.jpg" alt="">
+               
+            </div>
+            <div class="blog-slider__content">
+               
+                
+                <span class="blog-slider__code">Cessna-152</span>
+                <div class="blog-slider__text">Самолет: Cessna-152 </div>
+                <div class="blog-slider__text">Аэродром: Воскресенск </div>
+                <div class="blog-slider__text">Аэродром: Мячково </div>
+                <div class="blog-slider__text">Срок действия сертификат: 6 или 12 месяцев </div>
+                <div class="blog-slider__text">Цена: от 6750р </div>
+                
+               
+            </div>
+        </div>
+
+        <div class="blog-slider__item swiper-slide">
+            <div class="blog-slider__img">
+                <img src="Uslug1/5.jpg" alt="">
+               
+            </div>
+            <div class="blog-slider__content">
+                
+                <span class="blog-slider__code">Cessna-152</span>
+                <div class="blog-slider__text">Самолет: Cessna-152 </div>
+                <div class="blog-slider__text">Аэродром: Воскресенск </div>
+                <div class="blog-slider__text">Аэродром: Мячково </div>
+                <div class="blog-slider__text">Срок действия сертификат: 6 или 12 месяцев </div>
+                <div class="blog-slider__text">Цена: от 6750р </div>
+                
+               
+            </div>
+        </div>
+
+       
+
+    </div>
+    <div class="blog-slider__pagination"></div>
+</div> -->
+
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+            <!-- ....................................................КАЛЬКУЛЯТОР ЦЕН................................................ -->
+            <div class="section__header_uslug1">
+                <!-- <h3 class="section__suptitle_uslug1">Cessna-152</h3> -->
+                <h2 class="section__title_uslug1">Расчет цены</h2>
+
+                <div class="blog-slider">
+                    <div class="blog-slider__wrap swiper-wrapper">
+                        <div class="blog-slider__item swiper-slide">
+                            <div class="blog-slider__img">
+                                <img src="airport.png" alt="">
+                                <!-- <img src="2.png" alt=""> -->
+                            </div>
+                            <div class="blog-slider__content">
+                                <span class="blog-slider__code">L-29</span>
+                                <div class="blog-slider__title">Выберите аэродром</div>
+                                <div class="container_PriceP">
+                                    <!-- <p>Are you like this?</p> -->
+                                    <label>
+                                      <input type="radio" name="yesNo">
+                                      <span class="check"></span>
+                                      "Авиацентр Воскресенск"
+                                    </label>
+                            
+                                    <label>
+                                        <input type="radio" name="yesNo">
+                                        <span class="check"></span>
+                                        Аэродром «Мячково»
+                                      </label>
+                                     
+                                </div>
+                                <!-- <div class="blog-slider__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis labore ipsa</div> -->
+                                <!-- <a href="#" class="blog-slider__button">read more</a> -->
+                            </div>
+                        </div>
+            
+                        <div class="blog-slider__item swiper-slide">
+                            <div class="blog-slider__img">
+                                <img src="Lude.png" alt="">
+                            </div>
+                            <div class="blog-slider__content">
+                                <span class="blog-slider__code">L-29</span>
+                                <div class="blog-slider__title">Выберите количество человек</div>
+                                <div class="container_PriceP">
+                                    <!-- <p>Are you like this?</p> -->
+                                    <label>
+                                      <input type="radio" name="yesNo">
+                                      <span class="check"></span>
+                                      1 человек
+                                    </label>
+                            
+                                   
+                                     
+                                </div>
+
+                                
+                                <!-- <div class="blog-slider__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis labore ipsa</div> -->
+                                <!-- <a href="#" class="blog-slider__button">read more</a> -->
+                            </div>
+                        </div>
+            
+                        <div class="blog-slider__item swiper-slide">
+                            <div class="blog-slider__img">
+                                <img src="clock.png" alt="">
+                            </div>
+                            <div class="blog-slider__content">
+                                <span class="blog-slider__code">L-29</span>
+                                <div class="blog-slider__title">Выберите время</div>
+                                <label>
+                                    <input type="radio" name="yesNo">
+                                    <span class="check"></span>
+                                    20 мин
+                                  </label>
+                          
+                                  <label>
+                                      <input type="radio" name="yesNo">
+                                      <span class="check"></span>
+                                      30 мин
+                                    </label>
+                                    <label>
+                                      <input type="radio" name="yesNo">
+                                      <span class="check"></span>
+                                      40 мин
+                                    </label>
+
+                                    <label>
+                                        <input type="radio" name="yesNo">
+                                        <span class="check"></span>
+                                        60 мин
+                                      </label>
+                                <!-- <div class="blog-slider__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis labore ipsa</div>
+                                <a href="#" class="blog-slider__button">read more</a> -->
+                            </div>
+                        </div>       
+
+                        <div class="blog-slider__item swiper-slide">
+                            <div class="blog-slider__img">
+                                <img src="Photo.png" alt="">
+                            </div>
+                            <div class="blog-slider__content">
+                                <span class="blog-slider__code">L-29</span>
+                                <div class="blog-slider__title">Фото на память</div>
+                                <label>
+                                    <input type="radio" name="yesNo">
+                                    <span class="check"></span>
+                                    Собственные фото
+                                  </label>
+                          
+                                  <label>
+                                      <input type="radio" name="yesNo">
+                                      <span class="check"></span>
+                                      Фото/Видео оператор
+                                    </label>
+                                <!-- <div class="blog-slider__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis labore ipsa</div>
+                                <a href="#" class="blog-slider__button">read more</a> -->
+                            </div>
+                        </div>       
+
+
+                        <div class="blog-slider__item swiper-slide">
+                            <div class="blog-slider__img">
+                                <img src="Limit.png" alt="">
+                            </div>
+                            <div class="blog-slider__content">
+                                <span class="blog-slider__code">L-29</span>
+                                <div class="blog-slider__title">Лимит сертификата</div>
+                                <label>
+                                    <input type="radio" name="yesNo">
+                                    <span class="check"></span>
+                                    6 месяцев
+                                  </label>
+                          
+                                  <label>
+                                      <input type="radio" name="yesNo">
+                                      <span class="check"></span>
+                                      12 месяцев
+                                    </label>
+                                <!-- <div class="blog-slider__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis labore ipsa</div>
+                                <a href="#" class="blog-slider__button">read more</a> -->
+                            </div>
+                        </div>       
+
+                        <div class="blog-slider__item swiper-slide">
+                            <div class="blog-slider__img">
+                                <img src="sert.png" alt="">
+                            </div>
+                            <div class="blog-slider__content">
+                                <span class="blog-slider__code">L-29</span>
+                                <div class="blog-slider__title">Вид сертификата</div>
+                                <label>
+                                    <input type="radio" name="yesNo">
+                                    <span class="check"></span>
+                                    Электронный 
+                                  </label>
+                          
+                                  <label>
+                                      <input type="radio" name="yesNo">
+                                      <span class="check"></span>
+                                      Фирменный бланк
+                                    </label>
+                                <!-- <div class="blog-slider__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis labore ipsa</div>
+                                <a href="#" class="blog-slider__button">read more</a> -->
+                            </div>
+                        </div>       
+
+                        <div class="blog-slider__item swiper-slide">
+                            <div class="blog-slider__img">
+                                <img src="chek.png" alt="">
+                            </div>
+                            <div class="blog-slider__content">
+                                <span class="blog-slider__code">L-29</span>
+                                <div class="blog-slider__title">Итог:</div>
+                                 <!-- <div class="blog-slider__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis labore ipsa</div> -->
+                                <!-- <a href="#" class="blog-slider__button">Заказать</a>  -->
+                                <div class="TTT">
+                                    <a href="#" class="blog-slider__button_Prise">Заказать сертификат</a>
+                                    <!-- <a href="#" class="blog-slider__button_Prise">Заказать</a> -->
+                                </div>
+                                
+                               
+                            </div>
+                            
+                        </div>       
+            
+                    </div>
+                    
+                    <div class="blog-slider__pagination"></div>
+                </div>
+
+                
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- ......................................................КАРТИНКИ САМОЛЕТА......................................................... -->
+
+          
+        </div> 
+    </section>
+
+    <div class="contact-section" id="f">
+
+
+        <div class="contect-info">
+            <div><i class="fas fa-map-marker-alt"></i>Адрес:
+                <address class="footer__adres">
+                    <div>«Авиацентр Воскресенск» p д. Гостилово Воскресенский район, МО, ул. Земляничная, д. 1А </div>  
+                   <div> Аэродром «Мячково» село Верхнее Мячково, Раменский городской округ, МО </div> 
+                </address>
+            </div>
+            <div><i class="fas fa-phone"></i>
+                <a href="tel:  +74955064238" class="footer__fone">+7 (495) 506-42-38</a>
+                <!-- <a href="tel:  +74955064238">+7 (495) 506-42-38</a> -->
+            </div>
+            <div><i class="fas fa-envelope"></i>
+                <a href="mail:  @yndexttttt" class="footer__fone">@yndexttttt</a>
+                <!-- <a href="tel:  +74955064238">+7 (495) 506-42-38</a> -->
+            </div>
+            <div><i class="fas fa-credit-card"></i>
+                <!-- <a href="#">Наши реквизиты</a> -->
+                <a href="rekvizity.pdf" class="footer__recvez">
+                    Наши реквизиты
+                </a>
+            </div>
+            <div><i class="fas fa-coins"></i>
+                <!-- <a href="#">Оплата и возврат</a> -->
+                <a href="Оплата и возврат.pdf" class="footer__oplata"> Оплата и возврат</a>
+            </div>
+
+            <div class="footer__block">
+                <h4 class="footer__title">Социальные сети</h4>
+                <div class="social_team">
+                    <a class="social__item_team" href="#" target="_blank">
+                        <i class="uil uil-instagram"></i>
+                    </a>
+                    <a class="social__item_team" href="#" target="_blank">
+                        <i class="uil uil-vk"></i>
+                    </a>
+                    <a class="social__item_team" href="#" target="_blank">
+                        <i class="uil uil-telegram-alt"></i>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-form">
+            <h2>Связь с нами</h2>
+            <form action="contact" action="" method="post">
+                <input type="text" name="name" class="text-box" placeholder="Имя" required>
+                <input type="text" name="email" class="text-box" placeholder="Ваша почта" required>
+                <textarea name="message" rows="5" placeholder="Ваше сообщение" required></textarea>
+                <input type="submit" name="submit" class="send-bth" value="Отправить">
+            </form>
+        </div>
+
+
+
+    </div>
+    <div class="footer__copyright">
+
+
+        <div class="copyright__text">
+
+            <img src="iconn9.png" alt="">
+            <div>Полёты на самолётах в Подмосковье</div>
+            <div> © 1998-2022 Sky-Venture</div>
+            <div> Партнер по созданию сайта
+                <a href="#" class="MrSin"> MrSin</a>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="swiper-bundle.min.js.js"></script>
+    <script src="main.js"></script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.1.4/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+
+
+
+
+
+
+
+
+
+
+</body>
